@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+ <mapper namespace="com.jty.dao.UrlDao">
+ 	<select id="findAll" resultType="com.jty.entity.URLEnt" parameterType="java.lang.String">
+ 		select id,title,url,data,tag,create_date as createDate from url_entity 
+ 		<where>
+ 			<if test="_parameter != null and _parameter != ''">
+ 				 ( title like concat('%',#{_parameter},'%')  
+ 				or tag like concat('%',#{_parameter},'%') )
+ 			</if>
+ 		</where>
+ 	</select>
+ 	
+ 	<insert id="addUrlData" parameterType="com.jty.entity.URLEnt" useGeneratedKeys="true" keyProperty="id">
+ 		insert into url_entity 
+ 		 (title,url,data,tag,create_date) 
+ 		 values 
+ 		 (#{title},#{url},#{data},#{tag},#{createDate})
+ 	</insert>
+ 	
+ 	<delete id="deleteUrlData" parameterType="list">
+       delete  from  url_entity where id in  
+ 		<foreach collection="list" index="index" item="ids" open="(" separator="," close=")">
+ 		#{ids}
+ 		</foreach>
+ 	</delete> 
+ 	
+ </mapper>

@@ -1,0 +1,91 @@
+
+/* --------------- Ext CSS -------------- */
+/* Ext 2.0 */
+.x-window-footer {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+.x-tab-strip SPAN.x-tab-strip-text {
+    font:bold,13px,Microsoft Yahei;
+}
+.x-panel-header {
+    font: 13px verdana,helvetica,sans-serif,arial;
+}
+.x-tree-node {
+    font: 13px verdana,helvetica,sans-serif,arial;
+}
+.x-grid3-hd-row TD {
+    font: 13px verdana,helvetica,sans-serif,arial;
+}
+.x-grid3-row TD {
+    font: 13px verdana,helvetica,sans-serif,arial;
+    LINE-HEIGHT: 16px;
+}
+.x-tip .x-tip-bd {
+    font: 13px verdana,helvetica,sans-serif,arial;
+}
+.x-tip h3{
+    font: 13px verdana,helvetica,sans-serif,arial;
+}
+.x-tip .x-tip-bd-inner{
+    font: 13px verdana,helvetica,sans-serif,arial;
+}
+.x-panel-tl .x-panel-header {
+    FONT: normal 13px verdana,helvetica,sans-serif,arial;
+}
+.x-form-field {
+    FONT: 13px verdana,helvetica,sans-serif,arial;
+}
+.x-small-editor .x-form-field {
+    FONT: 13px verdana,helvetica,sans-serif,arial;
+}
+.x-combo-list-item {
+    FONT: 13px verdana,helvetica,sans-serif,arial;
+}    
+.x-menu-list-item {
+    FONT: 13px verdana,helvetica,sans-serif,arial;
+}
+.x-window-tl .x-window-header {
+    FONT: bold 13px verdana,helvetica,sans-serif,arial;
+}
+.ext-ie .x-form-text {
+    margin-top:1px;
+} /* the textField missing bottom line */
+.x-form-item {    
+    FONT: 13px verdana,helvetica,sans-serif,arial;
+}
+.x-grid-group-hd DIV {    
+    FONT: bold 13px verdana,helvetica,sans-serif,arial;
+}
+.ext-gecko .x-btn button {
+padding-left:0pt;
+padding-right:0pt;
+}
+.x-btn button{
+	font-family:verdana,helvetica,sans-serif,arial;
+    font-size:13px; margin-top:-1px;margin-bottom:-2px;
+}
+/*
+ * 解决x-btn-icon，背景图较宽，显示不全的问题。宽度从16改成20了。
+ */
+.ux-btn-icon .x-btn-center .x-btn-text{
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 16px;
+	width: 20px;
+	cursor:pointer;
+	white-space: nowrap;
+    padding:0;
+}
+.ux-btn-icon .x-btn-center{
+	padding:1px;
+}
+/*
+ * 增加x-selectable样式，使得在firefox、chrome可以选中grid中的内容进行复制。-add by xlj 2012-12-14
+ */
+.x-selectable, .x-selectable *{
+	-moz-user-select: text!important;
+	-khtml-user-select: text!important;
+}
+/* END */
